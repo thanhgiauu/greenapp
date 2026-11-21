@@ -1,0 +1,12 @@
+{
+  "name": "GREEN APP - Steam ID Lookup",
+  "short_name": "GREEN APP",
+  "description": "Tra cứu thông tin hồ sơ Steam",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070d0a",
+  "theme_color": "#07110d",
+  "icons": [
+    { "src": "/green-logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

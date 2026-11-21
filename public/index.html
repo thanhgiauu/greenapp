@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07110d">
+  <meta name="description" content="GREEN APP - Công cụ tra cứu thông tin hồ sơ Steam">
+  <title>GREEN APP | Steam ID Lookup</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/green-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="GREEN APP trang chủ">
+      <span class="brand-mark">G</span>
+      <span><strong>GREEN APP</strong><small>STEAM ID LOOKUP</small></span>
+    </a>
+    <span class="top-pill"><i></i> SYSTEM ONLINE</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow"><span></span> STEAM PROFILE INTELLIGENCE</div>
+      <h1>Tra cứu Steam ID<br><em>nhanh chóng & tiện lợi.</em></h1>
+      <p>Nhập Steam ID hoặc liên kết hồ sơ để xem tên tài khoản và trạng thái hoạt động.</p>
+    </section>
+
+    <section class="search-panel">
+      <label for="steamQuery">STEAM ID / PROFILE URL</label>
+      <div class="search-row">
+        <input id="steamQuery" type="text" placeholder="7656119... hoặc steamcommunity.com/id/..." autocomplete="off">
+        <button id="searchBtn"><span class="btn-icon">⌕</span> <span id="btnText">TRA CỨU</span></button>
+      </div>
+      <div class="search-hint"><span>ⓘ</span> Hỗ trợ SteamID64 và đường dẫn hồ sơ Steam công khai.</div>
+    </section>
+
+    <section id="result" class="result-card hidden" aria-live="polite">
+      <div class="result-heading"><span>PROFILE RESULT</span><span class="live-tag"><i></i> STEAM DATA</span></div>
+      <div class="profile-main">
+        <img id="avatar" class="avatar" src="/green-logo.svg" alt="Steam avatar">
+        <div class="profile-name"><h2 id="playerName">—</h2><span id="status" class="status">—</span><p id="activity">—</p></div>
+      </div>
+      <div class="info-grid">
+        <div class="info-box"><small>STEAM ID 64</small><strong id="steamId">—</strong><button class="copy" data-copy="steamId">SAO CHÉP</button></div>
+        <div class="info-box"><small>HOẠT ĐỘNG GẦN NHẤT</small><strong id="lastActive">—</strong></div>
+        <div class="info-box"><small>TRẠNG THÁI HỒ SƠ</small><strong id="visibility">—</strong></div>
+        <div class="info-box"><small>NGÀY TẠO TÀI KHOẢN</small><strong id="createdAt">—</strong></div>
+      </div>
+      <a id="profileLink" class="profile-link" href="#" target="_blank" rel="noopener noreferrer">MỞ HỒ SƠ STEAM ↗</a>
+    </section>
+
+    <section id="message" class="message hidden" role="alert"></section>
+
+    <section class="history-section">
+      <div class="section-title"><div><span class="eyebrow">RECENT SEARCHES</span><h3>Lịch sử tra cứu</h3></div><button id="clearHistory" class="text-button">XÓA LỊCH SỬ</button></div>
+      <div id="history" class="history-list"><p class="empty">Chưa có lịch sử tìm kiếm.</p></div>
+    </section>
+
+    <section class="note">
+      <span class="note-icon">✦</span>
+      <p><strong>Thông tin minh bạch</strong><br>GREEN APP chỉ hiển thị dữ liệu Steam API được phép công khai. “Hoạt động gần nhất” phụ thuộc vào dữ liệu Steam trả về; không phải lịch sử đăng nhập đầy đủ.</p>
+    </section>
+  </main>
+
+  <footer><span class="footer-logo">GREEN APP</span><span>Made for Steam community</span><span>© 2026</span></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
